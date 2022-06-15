@@ -42,6 +42,31 @@ body {
 	margin: 0 auto;
 }
 
+.main {
+	display: grid;
+	grid-template-columns: 280px 1fr;
+	grid-gap: 15px;
+	margin-top: 50px;
+}
+
+.main__skills {
+	grid-area: 1 / 1 / 3 / 2;
+}
+
+.main__example-code {
+	grid-area: 4 / 2 / 5 / 3;
+}
+
+.main__education {
+	grid-area: 5 / 2 / 6 / 3;
+}
+
+.main__language {
+	grid-area: 6 / 2 / 7 / 3;
+}
+
+/* header container */
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -60,10 +85,8 @@ body {
 
 .input__search {
 	display: flex;
-	width: 250px;
-	height: 39px;
-	padding: 0 10px;
-	border: 2px solid white;
+	width: 215px;
+	padding: 10px 10px;
 	border-radius: 30px;
 	background-color: #FFFFFF;
 	box-shadow: 3px 3px 10px rgba(120, 120, 120, 0.578);
@@ -71,22 +94,20 @@ body {
 
 .input__search input {
 	width: 100%;
-	border: none;
-	background-color: transparent;
-	outline: none;
 	padding-left: 15px;
+	border: none;
+	outline: none;
+	background-color: transparent;
 }
 
 .header__right {
-	width: 290px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	width: 290px;
 }
 
 .authorized-user {
-	display: flex;
-	align-items: center;
 	cursor: pointer;
 }
 
@@ -97,23 +118,35 @@ body {
 .authorized-user::after {
 	position: relative;
 	left: 10px;
+	bottom: 16px;
 	content: "Vladislav";
 	font-weight: 700;
 	color: #1F7BF2;
 }
 
-.main {
-	margin-top: 50px;
-	display: grid;
-	grid-template-columns: 280px 1fr;
-	justify-content: stretch;
-	grid-gap: 15px;
-}
+/* component for user post */
 
 .user-post {
 	padding: 10px 35px;
 	background-color: #fff;
 	border-radius: 15px;
+}
+
+.user-title {
+	display: flex;
+	gap: 20px;
+}
+
+.user-title__container h2 {
+	margin: 0 0 5px;
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.user-title__container p {
+	margin: 0;
+	font-size: 16px;
+	color: #636468;
 }
 
 .user-actions {
@@ -135,11 +168,15 @@ body {
 	font-size: 15px;
 }
 
+.btn-post:hover {
+	opacity: 0.8;
+}
+
 .user-add-comment {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	margin-top: 8px;
+	margin-top: 15px;
 }
 
 .user-add-comment img {
@@ -155,36 +192,6 @@ body {
 	color:#636468;
 }
 
-.user-title {
-	display: flex;
-	gap: 20px;
-}
-
-.user-title__container {
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-}
-
-.user-title__container h2 {
-	margin: 0;
-	font-size: 24px;
-	font-weight: 700;
-
-}
-
-.user-title__container p {
-	margin: 0;
-	font-size: 16px;
-	color: #636468;
-}
-
-.profile {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
 .profile__avatar {
 	display: flex;
 	align-items: center;
@@ -197,6 +204,7 @@ body {
 }
 
 .profile__FIO {
+	position: relative;
 	padding: 0 35px;
 	font-size: 25px;
 	line-height: 1.8em;
@@ -204,7 +212,6 @@ body {
 	color: #636468;
 	background-color: #F1F2F6;
 	border-radius: 37px;
-	position: relative;
 }
 
 .profile__FIO::after {
@@ -219,7 +226,8 @@ body {
 .profile__contact {
 	display: flex;
 	justify-content: space-between;
-	padding: 15px;
+	margin-top: 25px;
+	padding-top: 15px;
 	border-top: 2px solid #707070
 }
 
@@ -227,6 +235,7 @@ body {
 	content: "Elista, Russian";
 	position: relative;
 	bottom: 10px;
+	color: #636468;
 }
 
 .profile__telphone-link {
@@ -255,10 +264,6 @@ body {
 	margin-top: 70px;
 }
 
-.main__skills {
-	grid-area: 1 / 1 / 3 / 2;
-}
-
 .skills__list{
 	padding: 0;
 	list-style: none;
@@ -270,21 +275,9 @@ body {
 	margin-top: 20px;
 }
 
-.main__example-code {
-	grid-area: 4 / 2 / 5 / 3;
-}
-
 .main__example-code h3 {
 	font-size: 16px;
 	font-weight: 400;
-}
-
-.main__education {
-	grid-area: 5 / 2 / 6 / 3;
-}
-
-.main__language {
-	grid-area: 6 / 2/ 7/ 3;
 }
 
 .footer {
@@ -292,7 +285,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 30px;
+	padding: 7px 30px;
 	background-color: #fff;
 	border-radius: 15px;
-	padding: 7px 30px;
 }
