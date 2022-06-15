@@ -28,6 +28,7 @@
 * {
 	box-sizing: border-box;
 }
+
 body {
 	font-family: "Roboto";
 	font-weight: 400;
@@ -67,6 +68,7 @@ body {
 	background-color: #FFFFFF;
 	box-shadow: 3px 3px 10px rgba(120, 120, 120, 0.578);
 }
+
 .input__search input {
 	width: 100%;
 	border: none;
@@ -82,10 +84,6 @@ body {
 	justify-content: space-between;
 }
 
-.social-link {
-	
-}
-
 .authorized-user {
 	display: flex;
 	align-items: center;
@@ -95,6 +93,7 @@ body {
 .authorized-user img {
 	border-radius: 50%;
 }
+
 .authorized-user::after {
 	position: relative;
 	left: 10px;
@@ -102,26 +101,6 @@ body {
 	font-weight: 700;
 	color: #1F7BF2;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .main {
 	margin-top: 50px;
@@ -144,6 +123,7 @@ body {
 	border-top: 2px solid #70707042;;
 	border-bottom: 2px solid #70707042;
 }
+
 .btn-post {
 	display: flex;
 	align-items: center;
@@ -165,6 +145,7 @@ body {
 .user-add-comment img {
 	border-radius: 50%;
 }
+
 .user-comment {
 	width: 100%;
 	padding: 8px 17px;
@@ -214,6 +195,7 @@ body {
 .profile__avatar img {
 	border-radius: 50%;
 }
+
 .profile__FIO {
 	padding: 0 35px;
 	font-size: 25px;
@@ -222,7 +204,18 @@ body {
 	color: #636468;
 	background-color: #F1F2F6;
 	border-radius: 37px;
+	position: relative;
 }
+
+.profile__FIO::after {
+	content: "Front-end developer";
+	display: block;
+	position: absolute;
+	top: 38px;
+	font-size: 18px;
+	color: #333;
+}
+
 .profile__contact {
 	display: flex;
 	justify-content: space-between;
@@ -235,10 +228,12 @@ body {
 	position: relative;
 	bottom: 10px;
 }
+
 .profile__telphone-link {
 	text-decoration: none;
 	color: #636468;
 }
+
 .profile__telphone-link::after {
 	content: "+7-(927)-593-00-90";
 	position: relative;
@@ -249,18 +244,12 @@ body {
 	text-decoration: none;
 	color: #636468;
 }
+
 .profile__mail-link::after {
 	content: "vladislav.palaev@yandex.ru";
 	position: relative;
 	bottom: 10px;
 }
-
-
-
-
-
-
-
 
 .main__summary .user-actions {
 	margin-top: 70px;
